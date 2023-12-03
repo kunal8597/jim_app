@@ -1,14 +1,40 @@
 import React from 'react';
-import { Box, Stack, Typography } from '@mui/material';
-import Logo from '../assets/images/Logo-1.png';
+import { Container, Grid, Typography } from '@mui/material';
 
-const Footer = () => (
-  <Box mt="80px" bgcolor="#FFF3F4">
-    <Stack gap="40px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="40px" pt="24px">
-      <img src={Logo} alt="logo" style={{ width: '200px', height: '41px' }} />
-    </Stack>
-    <Typography variant="h5" sx={{ fontSize: { lg: '28px', xs: '20px' } }} mt="41px" textAlign="center" pb="40px">Made with ❤️ by JavaScript Mastery</Typography>
-  </Box>
-);
+const Footer = () => {
+  return (
+    <footer style={{ backgroundColor: '#1a1a1a', color: '#fff', padding: '40px 0' }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={4}>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" gutterBottom style={{ marginBottom: '1.5em', color: '#ffcc00' }}>
+              Company Name
+            </Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>About Us</Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Contact Us</Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" gutterBottom style={{ marginBottom: '1.5em', color: '#ffcc00' }}>
+              Services
+            </Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Service 1</Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Service 2</Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Service 3</Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Typography variant="h6" gutterBottom style={{ marginBottom: '1.5em', color: '#ffcc00' }}>
+              Follow Us
+            </Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Facebook</Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Twitter</Typography>
+            <Typography style={{ marginBottom: '0.5em' }}>Instagram</Typography>
+          </Grid>
+        </Grid>
+      </Container>
+   
+    </footer>
+  );
+};
 
 export default Footer;
+
